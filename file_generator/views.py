@@ -3,6 +3,7 @@ from drf_yasg.utils import swagger_auto_schema
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from datetime import datetime
+import os
 import random
 import string
 from django.http.response import HttpResponse
@@ -105,6 +106,10 @@ class Contest:
             path = open('file_generator/generated_file/file', 'r')
             response = HttpResponse(path, content_type='text/plain')
             response['Content-Disposition'] = "attachment; filename=%s" % 'file'
+            try:
+                os.remove("file_generator/generated_file/file")
+            except Exception as e:
+                pass
             return response
         except FileNotFoundError as e:
             return Response(
