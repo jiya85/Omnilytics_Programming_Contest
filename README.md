@@ -10,7 +10,7 @@ According to the challange stated here https://docs.google.com/document/d/1RvJaY
 2. cd to the directory Omnilytics_Programming_Contest
 3. Now build the docker image by running the command ``` docker-compose build ```
 4. After the image is built, run the command ``` docker-compose up ``` to run the application as a container
-5. You will be seing some like:
+5. You will be seing something like:
 6. ![Screenshot_1](https://user-images.githubusercontent.com/59188728/141673769-de8a9635-3950-4a4c-8b87-b21c74e9cd5e.png)
 7. Now the application is up and running
 
